@@ -1,26 +1,6 @@
-include <dt-bindings/zmk/ext_power.h>
-
-/ {
-  behaviors {
-    hp_pwr: hold_pwr {
-      compatible = "zmk,behavior-hold-tap";
-      label = "HOLD_PWR";
-      #binding-cells = <2>;
-      tapping-term-ms = <1000>;
-      quick-tap-ms = <0>;
--     bindings = <&kp NO>, <&ext_power EP_TOG>;
-+     bindings = <&none>, <&ext_power EP_TOG>; // Use &none for empty hold
-    };
-    hp_rst: hold_rst {
-      compatible = "zmk,behavior-hold-tap";
-      label = "HOLD_RST";
-      #binding-cells = <2>;
-      tapping-term-ms = <1000>;
-      quick-tap-ms = <0>;
--     bindings = <&kp NO>, <&bootloader>;
-+     bindings = <&none>, <&bootloader>; // Use &none
-    };
-  };
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
 
   keymap {
     compatible = "zmk,keymap";
@@ -39,14 +19,4 @@ include <dt-bindings/zmk/ext_power.h>
         &kp DEL,  &kp INS,  &kp BSPC, &kp ENTER, &kp LSFT, &trans
       >;
     };
-
-    layer_1 {
-      bindings = <
-        // Left Num/System
--       &hp_pwr NUM_1 EP_TOG,    &hp_rst NUM_2 BOOTLOADER,
--       &kp 
-+       &hp_pwr NUM_1 EP_TOG,    &hp_rst NUM_2 BOOTLOADER, &trans // Remove invalid symbol
-      >;
-    };
-  };
 };
