@@ -1,0 +1,13 @@
+#include "ckv1.dtsi"
+
+&kscan0 {
+    // Left half columns (adjust pins!)
+    col-gpios 
+   = <&pro_micro 11 GPIO_ACTIVE_HIGH  // P0.11
+   , <&pro_micro 00 GPIO_ACTIVE_HIGH  // P1.00
+   , <&pro_micro 24 GPIO_ACTIVE_HIGH  // P0.24
+   , <&pro_micro 22 GPIO_ACTIVE_HIGH  // P0.22
+   , <&pro_micro 20 GPIO_ACTIVE_HIGH  // P0.20
+   , <&pro_micro 17 GPIO_ACTIVE_HIGH  // P0.17
+    >;
+};
