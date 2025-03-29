@@ -22,7 +22,6 @@
 +     bindings = <&none>, <&bootloader>; // Use &none
     };
   };
-/ {
   chosen {
     zmk,kscan = &kscan0;
     zmk,matrix_transform = &default_transform;
