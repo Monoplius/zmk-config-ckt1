@@ -1,5 +1,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/ext_power.h> // Added this line
 
 / {
   behaviors {
@@ -9,7 +10,7 @@
       #binding-cells = <2>;
       tapping-term-ms = <1000>;
       quick-tap-ms = <0>;
-      bindings = <&kp NONE>, <&ext_power EP_TOG>;
+      bindings = <&kp NO>, <&ext_power EP_TOG>; // Replaced NONE with NO
     };
     hp_rst: hold_rst {
       compatible = "zmk,behavior-hold-tap";
@@ -17,7 +18,7 @@
       #binding-cells = <2>;
       tapping-term-ms = <1000>;
       quick-tap-ms = <0>;
-      bindings = <&kp NONE>, <&bootloader>;
+      bindings = <&kp NO>, <&bootloader>; // Replaced NONE with NO
     };
   };
 
@@ -43,16 +44,4 @@
       bindings = <
         // Left Num/System
         &hp_pwr NUM_1 EP_TOG,    &hp_rst NUM_2 BOOTLOADER,
-        &kp NUM_3,     &kp NUM_4, &kp NUM_5,     &kp NUM_6,
-        &kp NUM_7,     &kp NUM_8, &kp NUM_9,     &kp NUM_0,
-        &trans,        &trans,    &trans,        &trans,
-
-        // Right Symbols
-        &kp EXCL,  &kp AT,    &kp HASH,  &kp DLLR,  &kp PRCNT, &kp CARET,
-        &kp AMP,   &kp STAR,  &kp LPAR,  &kp RPAR,  &kp UNDER, &kp PLUS,
-        &kp LBRC,  &kp RBRC,  &kp LCBR,  &kp RCBR,  &kp PIPE,  &kp TILDE,
-        &trans,    &trans,    &trans,    &trans,    &trans,    &trans
-      >;
-    };
-  };
-};
+        &kp ▋
