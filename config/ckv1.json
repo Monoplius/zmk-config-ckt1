@@ -5,30 +5,41 @@
     "default_transform": {
       "name": "default_transform",
       "layout": [
-        // Left Half (3x5 + 3 thumb keys)
+        // Left Half (4x6 + 3 thumb keys)
         // Main rows
         { "row": 0, "col": 0, "x": 1, "y": 0.4 },   // COL0 ROW0
         { "row": 0, "col": 1, "x": 2, "y": 0.4 },   // COL1 ROW0
         { "row": 0, "col": 2, "x": 3, "y": 0.2 },   // COL2 ROW0
         { "row": 0, "col": 3, "x": 4, "y": 0 },     // COL3 ROW0
         { "row": 0, "col": 4, "x": 5, "y": 0.2 },   // COL4 ROW0
+        { "row": 0, "col": 5, "x": 5, "y": 0.2 },   // COL5 ROW0
 
         { "row": 1, "col": 0, "x": 1, "y": 1.4 },   // COL0 ROW1
         { "row": 1, "col": 1, "x": 2, "y": 1.4 },   // COL1 ROW1
         { "row": 1, "col": 2, "x": 3, "y": 1.2 },   // COL2 ROW1
         { "row": 1, "col": 3, "x": 4, "y": 1 },     // COL3 ROW1
         { "row": 1, "col": 4, "x": 5, "y": 1.2 },   // COL4 ROW1
+        { "row": 1, "col": 5, "x": 5, "y": 1.2 },   // COL5 ROW1
 
         { "row": 2, "col": 0, "x": 1, "y": 2.4 },   // COL0 ROW2
         { "row": 2, "col": 1, "x": 2, "y": 2.4 },   // COL1 ROW2
         { "row": 2, "col": 2, "x": 3, "y": 2.2 },   // COL2 ROW2
         { "row": 2, "col": 3, "x": 4, "y": 2 },     // COL3 ROW2
         { "row": 2, "col": 4, "x": 5, "y": 2.2 },   // COL4 ROW2
+        { "row": 2, "col": 4, "x": 5, "y": 2.2 },   // COL5 ROW2
+
+        { "row": 3, "col": 0, "x": 1, "y": 3.4 },   // COL0 ROW3
+        { "row": 3, "col": 0, "x": 1, "y": 3.4 },   // COL1 ROW3
+        { "row": 3, "col": 0, "x": 1, "y": 3.2 },   // COL2 ROW3
+        { "row": 3, "col": 0, "x": 1, "y": 3 },     // COL3 ROW3
+        { "row": 3, "col": 0, "x": 1, "y": 3.2 },   // COL4 ROW3
+        { "row": 3, "col": 0, "x": 1, "y": 3.2 },   // COL5 ROW3
 
         // Thumb cluster (extra key added)
-        { "row": 3, "col": 0, "x": 1.5, "y": 3.4 }, // Thumb1
-        { "row": 3, "col": 1, "x": 2.5, "y": 3.4 }, // Thumb2
-        { "row": 3, "col": 2, "x": 3.5, "y": 3.4 }, // Extra thumb
+        { "row": 4, "col": 0, "x": 1.5, "y": 4.4 }, // Thumb1
+        { "row": 4, "col": 1, "x": 2.5, "y": 4.4 }, // Thumb2
+      
+        { "row": 5, "col": 2, "x": 2, "y": 5.4 }, // Extra thumb
 
         // Right Half (mirror of left)
         { "row": 0, "col": 5, "x": 7, "y": 0.4 },   // COL5 ROW0
@@ -36,23 +47,34 @@
         { "row": 0, "col": 7, "x": 9, "y": 0.2 },   // COL7 ROW0
         { "row": 0, "col": 8, "x": 10, "y": 0 },    // COL8 ROW0
         { "row": 0, "col": 9, "x": 11, "y": 0.2 },  // COL9 ROW0
+        { "row": 0, "col": 10, "x": 5, "y": 2.2 },   // COL10 ROW0
 
         { "row": 1, "col": 5, "x": 7, "y": 1.4 },   // COL5 ROW1
         { "row": 1, "col": 6, "x": 8, "y": 1.4 },   // COL6 ROW1
         { "row": 1, "col": 7, "x": 9, "y": 1.2 },   // COL7 ROW1
         { "row": 1, "col": 8, "x": 10, "y": 1 },    // COL8 ROW1
         { "row": 1, "col": 9, "x": 11, "y": 1.2 },  // COL9 ROW1
+        { "row": 1, "col": 10, "x": 5, "y": 1.2 },   // COL10 ROW1
 
         { "row": 2, "col": 5, "x": 7, "y": 2.4 },   // COL5 ROW2
         { "row": 2, "col": 6, "x": 8, "y": 2.4 },   // COL6 ROW2
         { "row": 2, "col": 7, "x": 9, "y": 2.2 },   // COL7 ROW2
         { "row": 2, "col": 8, "x": 10, "y": 2 },    // COL8 ROW2
         { "row": 2, "col": 9, "x": 11, "y": 2.2 },  // COL9 ROW2
+        { "row": 2, "col": 10, "x": 5, "y": 2.2 },   // COL10 ROW2
+
+        { "row": 3, "col": 5, "x": 5, "y": 3.4 },   // COL5 ROW3
+        { "row": 3, "col": 6, "x": 5, "y": 3.4 },   // COL6 ROW3
+        { "row": 3, "col": 7, "x": 5, "y": 2 },   // COL7 ROW3
+        { "row": 3, "col": 8, "x": 5, "y": 2.2 },   // COL8 ROW3
+        { "row": 3, "col": 9, "x": 5, "y": 3.2 },   // COL9 ROW3
+        { "row": 3, "col": 10, "x": 5, "y": 3.2 },   // COL10 ROW3
 
         // Right thumb cluster
-        { "row": 3, "col": 5, "x": 7.5, "y": 3.4 }, // Thumb1
-        { "row": 3, "col": 6, "x": 8.5, "y": 3.4 }, // Thumb2
-        { "row": 3, "col": 7, "x": 9.5, "y": 3.4 }  // Extra thumb
+        { "row": 4, "col": 5, "x": 7.5, "y": 4.4 }, // Thumb1
+        { "row": 4, "col": 6, "x": 8.5, "y": 4.4 }, // Thumb2
+
+        { "row": 5, "col": 5, "x": 8, "y": 5.4 }  // Extra thumb
       ]
     }
   },
