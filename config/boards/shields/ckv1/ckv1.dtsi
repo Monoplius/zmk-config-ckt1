@@ -35,3 +35,7 @@
           , <&pro_micro 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // Inner (P0.17)
           , <&pro_micro 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   // Thumb Layer (P0.08)
           , <&pro_micro 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   // Thumb Space (P0.06)
+           ;
+
+    };
+};
