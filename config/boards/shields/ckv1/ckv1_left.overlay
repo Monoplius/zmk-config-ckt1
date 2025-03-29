@@ -3,11 +3,12 @@
 &kscan0 {
     // Left half columns (adjust pins!)
     col-gpios 
-   = <&pro_micro 11 GPIO_ACTIVE_HIGH  // P0.11
-   , <&pro_micro 00 GPIO_ACTIVE_HIGH  // P1.00
-   , <&pro_micro 24 GPIO_ACTIVE_HIGH  // P0.24
-   , <&pro_micro 22 GPIO_ACTIVE_HIGH  // P0.22
-   , <&pro_micro 20 GPIO_ACTIVE_HIGH  // P0.20
-   , <&pro_micro 17 GPIO_ACTIVE_HIGH  // P0.17
-    >;
+   row-gpios 
+  = <&pro_micro16 GPIO_ACTIVE_HIGH  // Bottom (P0.10)
+  , <&pro_micro10 GPIO_ACTIVE_HIGH   // Home (P0.09)
+  , <&pro_micro9  GPIO_ACTIVE_HIGH   // Top (P1.06)
+  , <&pro_micro8  GPIO_ACTIVE_HIGH   // Num (P1.04)
+  , <&pro_micro21 GPIO_ACTIVE_HIGH  // Cluster (P0.31)
+  , <&pro_micro20 GPIO_ACTIVE_HIGH  // Fn (P0.29)
+      >;
 };
