@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4 # Updated to v4
 
       - name: Setup ZMK
         run: |
@@ -31,7 +31,7 @@ jobs:
           mv build/zephyr/zmk.uf2 $GITHUB_WORKSPACE/ckv1_right.uf2
 
       - name: Upload Artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4 # Updated to v4
         with:
           name: firmware
           path: |
