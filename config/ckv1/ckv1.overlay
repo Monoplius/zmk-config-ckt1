@@ -35,43 +35,43 @@
 
     #ifdef SIDE_LEFT
       col-gpios = <
-        &gpio0 11 GPIO_ACTIVE_HIGH  // Outer (P0.11)
-        &gpio1 0 GPIO_ACTIVE_HIGH   // Pinky (P1.00)
-        &gpio0 24 GPIO_ACTIVE_HIGH  // Ring (P0.24)
-        &gpio0 22 GPIO_ACTIVE_HIGH  // Middle (P0.22)
-        &gpio0 20 GPIO_ACTIVE_HIGH  // Index (P0.20)
-        &gpio0 17 GPIO_ACTIVE_HIGH  // Inner (P0.17)
-        &gpio0 8 GPIO_ACTIVE_HIGH   // Thumb Layer (P0.08)
+        &gpio7 GPIO_ACTIVE_HIGH  // Outer (P0.11)
+        &gpio6 GPIO_ACTIVE_HIGH   // Pinky (P1.00)
+        &gpio5 GPIO_ACTIVE_HIGH  // Ring (P0.24)
+        &gpio4 GPIO_ACTIVE_HIGH  // Middle (P0.22)
+        &gpio3 GPIO_ACTIVE_HIGH  // Index (P0.20)
+        &gpio2 GPIO_ACTIVE_HIGH  // Inner (P0.17)
+        &gpio1 GPIO_ACTIVE_HIGH   // Thumb Layer (P0.08)
         &gpio0 6 GPIO_ACTIVE_HIGH   // Thumb Space (P0.06)
       >;
       row-gpios = <
-        &gpio0 10 GPIO_ACTIVE_HIGH  // Bottom (P0.10)
-        &gpio0 9 GPIO_ACTIVE_HIGH   // Home (P0.09)
-        &gpio1 6 GPIO_ACTIVE_HIGH   // Top (P1.06)
-        &gpio1 4 GPIO_ACTIVE_HIGH   // Num (P1.04)
-        &gpio0 31 GPIO_ACTIVE_HIGH  // Cluster (P0.31)
-        &gpio0 29 GPIO_ACTIVE_HIGH  // Fn (P0.29)
+        &gpio16 GPIO_ACTIVE_HIGH  // Bottom (P0.10)
+        &gpio10 GPIO_ACTIVE_HIGH   // Home (P0.09)
+        &gpio9  GPIO_ACTIVE_HIGH   // Top (P1.06)
+        &gpio8  GPIO_ACTIVE_HIGH   // Num (P1.04)
+        &gpio21 GPIO_ACTIVE_HIGH  // Cluster (P0.31)
+        &gpio20 GPIO_ACTIVE_HIGH  // Fn (P0.29)
       >;
     #endif
 
     #ifdef SIDE_RIGHT
       col-gpios = <
-        &gpio0 11 GPIO_ACTIVE_HIGH  // Outer (P0.11)
-        &gpio1 0 GPIO_ACTIVE_HIGH   // Pinky (P1.00)
-        &gpio0 24 GPIO_ACTIVE_HIGH  // Ring (P0.24)
-        &gpio0 22 GPIO_ACTIVE_HIGH  // Middle (P0.22)
-        &gpio0 20 GPIO_ACTIVE_HIGH  // Index (P0.20)
-        &gpio0 17 GPIO_ACTIVE_HIGH  // Inner (P0.17)
-        &gpio0 8 GPIO_ACTIVE_HIGH   // Thumb Layer (P0.08)
-        &gpio0 6 GPIO_ACTIVE_HIGH   // Thumb Space (P0.06)
+        &gpio7 GPIO_ACTIVE_HIGH  // Outer (P0.11)
+        &gpio6 GPIO_ACTIVE_HIGH   // Pinky (P1.00)
+        &gpio5 GPIO_ACTIVE_HIGH  // Ring (P0.24)
+        &gpio4 GPIO_ACTIVE_HIGH  // Middle (P0.22)
+        &gpio3 GPIO_ACTIVE_HIGH  // Index (P0.20)
+        &gpio2 GPIO_ACTIVE_HIGH  // Inner (P0.17)
+        &gpio1 GPIO_ACTIVE_HIGH   // Thumb Layer (P0.08)
+        &gpio0 GPIO_ACTIVE_HIGH   // Thumb Space (P0.06)
       >;
       row-gpios = <
-        &gpio0 10 GPIO_ACTIVE_HIGH  // Bottom (P0.10)
-        &gpio0 9 GPIO_ACTIVE_HIGH   // Home (P0.09)
-        &gpio1 6 GPIO_ACTIVE_HIGH   // Top (P1.06)
-        &gpio1 4 GPIO_ACTIVE_HIGH   // Num (P1.04)
-        &gpio0 31 GPIO_ACTIVE_HIGH  // Cluster (P0.31)
-        &gpio0 29 GPIO_ACTIVE_HIGH  // Fn (P0.29)
+        &gpio16 GPIO_ACTIVE_HIGH  // Bottom (P0.10)
+        &gpio10 GPIO_ACTIVE_HIGH   // Home (P0.09)
+        &gpio9  GPIO_ACTIVE_HIGH   // Top (P1.06)
+        &gpio8  GPIO_ACTIVE_HIGH   // Num (P1.04)
+        &gpio21 GPIO_ACTIVE_HIGH  // Cluster (P0.31)
+        &gpio20 GPIO_ACTIVE_HIGH  // Fn (P0.29)
       >;
     #endif
   };
