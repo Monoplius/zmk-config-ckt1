@@ -29,9 +29,6 @@
     compatible = "zmk,kscan-gpio-matrix";
     diode-direction = "col2row";
     wakeup-source;
-
-    // Pro Micro GPIO Pins (Arduino labels → GPIO numbers)
-    // Example: Pro Micro D0 → GPIO 10 (nRF52840)
     row-gpios = 
             <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // Outer (P0.11)
           , <&pro_micro 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   // Pinky (P1.00)
