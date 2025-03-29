@@ -11,7 +11,6 @@
       quick-tap-ms = <0>;
       bindings = <&kp>, <&ext_power EP_TOG>;
     };
-
     hp_rst: hold_rst {
       compatible = "zmk,behavior-hold-tap";
       label = "HOLD_RST";
@@ -26,21 +25,33 @@
     compatible = "zmk,keymap";
     default_layer {
       bindings = <
-        // QWERTZ Base Layer
+        // Left Half (QWERTZ)
         &kp Q    &kp W    &kp E    &kp R    &kp T    &kp Z
         &kp A    &kp S    &kp D    &kp F    &kp G    &kp H
         &kp Y    &kp X    &kp C    &kp V    &kp B    &kp N
         &mo 1    &kp LCTL &kp LALT &kp SPACE &kp TAB  &kp ESC
+
+        // Right Half
+        &kp U    &kp I    &kp O    &kp P    &kp LBKT &kp RBKT
+        &kp J    &kp K    &kp L    &kp SEMI &kp QUOT &kp BSLH
+        &kp M    &kp COMM &kp DOT  &kp SLASH &kp MINUS &kp EQUAL
+        &kp DEL  &kp INS  &kp BSPC &kp ENTER &kp LSHFT &trans
       >;
     };
 
     layer_1 {
       bindings = <
-        // Outer (P0.11)          Pinky (P1.00)
+        // Left Num/System
         &hp_pwr NUM_1  EP_TOG    &hp_rst NUM_2  BOOTLOADER
         &kp NUM_3      &kp NUM_4 &kp NUM_5      &kp NUM_6
         &kp NUM_7      &kp NUM_8 &kp NUM_9      &kp NUM_0
         &trans         &trans    &trans         &trans
+
+        // Right Symbols
+        &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT &kp CARET
+        &kp AMP   &kp STAR  &kp LPAR  &kp RPAR  &kp UNDER &kp PLUS
+        &kp LBRC &kp RBRC  &kp LCBR &kp RCBR  &kp PIPE  &kp TILDE
+        &trans    &trans    &trans   &trans    &trans    &trans
       >;
     };
   };
