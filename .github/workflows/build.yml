@@ -24,16 +24,16 @@ jobs:
           west init -l app/
           west update
 
-      - name: Build Firmware (Left)
+      - name: Build Left
         run: |
           cd zmk
-          west build -s app -b nice_nano_v2 -- -DSHIELD=ckv1_left -DZMK_CONFIG="$GITHUB_WORKSPACE/config"
+          west build -s app -b nice_nano_v2 -- -DSHIELD=ckv1_left -DZMK_CONFIG="$GITHUB_WORKSPACE/config/ckv1"
           mv build/zephyr/zmk.uf2 $GITHUB_WORKSPACE/ckv1_left.uf2
 
-      - name: Build Firmware (Right)
+      - name: Build Right
         run: |
           cd zmk
-          west build -s app -b nice_nano_v2 -- -DSHIELD=ckv1_right -DZMK_CONFIG="$GITHUB_WORKSPACE/config"
+          west build -s app -b nice_nano_v2 -- -DSHIELD=ckv1_right -DZMK_CONFIG="$GITHUB_WORKSPACE/config/ckv1"
           mv build/zephyr/zmk.uf2 $GITHUB_WORKSPACE/ckv1_right.uf2
 
       - name: Upload Artifacts
