@@ -1,0 +1,55 @@
+#include <dt-bindings/zmk/matrix_transform.h>
+
+/ {
+	chosen {
+		zmk,kscan = &kscan0;
+		zmk,matrix_transform = &default_transform;
+	};
+
+	default_transform: keymap_transform_0 {
+		compatible = "zmk,matrix-transform";
+		columns = <16>;
+		rows = <6>;
+// | SW1  | SW6  | SW11 | SW16 | SW21 | SW26 |      |      | |      |      | SW26 | SW21 | SW16 | SW11 | SW6  | SW1  |
+// | SW2  | SW7  | SW12 | SW17 | SW22 | SW27 |      |      | |      |      | SW27 | SW22 | SW17 | SW12 | SW7  | SW2  |
+// | SW3  | SW8  | SW13 | SW18 | SW23 | SW28 |      |      | |      |      | SW28 | SW23 | SW18 | SW13 | SW8  | SW3  |
+// | SW4  | SW9  | SW14 | SW19 | SW24 | SW29 |      |      | |      |      | SW29 | SW24 | SW19 | SW14 | SW9  | SW4  |
+// |      |      |      |      |      |      |  SW5 | SW10 | |  SW5 | SW10 |      |      |      |      |      |      |
+// |      |      |      |      |      |      | SW15 |      | |      | SW15 |      |      |      |      |      |      |
+		map = <
+RC(0,0) RC(0,1) RC(0,2) RC(0,3) RC(0,4) RC(0,5)                                             RC(0,13) RC(0,12) RC(0,11) RC(0,10) RC(0,9) RC(0,8)
+RC(1,0) RC(1,1) RC(1,2) RC(1,3) RC(1,4) RC(1,5)                                             RC(1,13) RC(1,12) RC(1,11) RC(1,10) RC(1,9) RC(1,8)
+RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)                                             RC(2,13) RC(2,12) RC(2,11) RC(2,10) RC(2,9) RC(2,8)
+RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5)                                             RC(3,13) RC(3,12) RC(3,11) RC(3,10) RC(3,9) RC(3,8)
+                                                RC(4,6) RC(4,7)  RC(4,15) RC(4,14)
+                                                RC(5,6)                   RC(5,14)
+		>;
+  };
+
+	kscan0: kscan {
+		compatible = "zmk,kscan-gpio-matrix";
+    diode-direction = "col2row";
+        wakeup-source;
+		label = "KSCAN";
+
+    row-gpios = 
+           <&pro_micro8  GPIO_ACTIVE_HIGH>   // Num (P1.04)
+         , <&pro_micro9  GPIO_ACTIVE_HIGH>   // Top (P1.06)
+         , <&pro_micro10 GPIO_ACTIVE_HIGH>   // Home (P0.09)
+         , <&pro_micro16 GPIO_ACTIVE_HIGH>  // Bottom (P0.10)
+         , <&pro_micro21 GPIO_ACTIVE_HIGH>  // Cluster (P0.31)
+         , <&pro_micro20 GPIO_ACTIVE_HIGH>  // Fn (P0.29)
+         ;
+  
+		col-gpios = 
+            <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // Outer (P0.11)
+          , <&pro_micro 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   // Pinky (P1.00)
+          , <&pro_micro 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // Ring (P0.24)
+          , <&pro_micro 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // Middle (P0.22)
+          , <&pro_micro 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // Index (P0.20)
+          , <&pro_micro 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // Inner (P0.17)
+          , <&pro_micro 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   // Thumb Layer (P0.08)
+          , <&pro_micro 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   // Thumb Space (P0.06)
+           ;
+    };
+};
