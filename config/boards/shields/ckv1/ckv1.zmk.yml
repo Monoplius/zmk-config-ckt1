@@ -1,0 +1,11 @@
+file_format: "1"
+id: ckv1
+name: Ckv1
+type: shield
+url: https://github.com/Monoplius/zmk-config-ckt1/
+requires: [pro_micro]
+features:
+  - keys
+siblings:
+  - taira_left
+  - taira_right
